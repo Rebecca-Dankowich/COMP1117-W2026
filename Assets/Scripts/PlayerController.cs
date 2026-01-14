@@ -15,7 +15,6 @@ public class PlayerController : MonoBehaviour
     {
         //initialize
         rBody = GetComponent<Rigidbody2D>();
-        
         stats = new PlayerStats();
         int something = stats.MoveSpeed;
     }
@@ -35,4 +34,5 @@ public class PlayerController : MonoBehaviour
         float velocityX = moveInput.x;
         rBody.linearVelocity = new Vector2(velocityX * stats.MoveSpeed, rBody.linearVelocity.y);
     }
+
 }
