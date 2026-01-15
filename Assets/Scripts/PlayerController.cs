@@ -42,8 +42,15 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        stats.CurrentHealth -= damageAmount;
-
-        Debug.Log($"Enemy dealt {damageAmount} damage");
+        if (stats.CurrentHealth <= 0)
+        {
+            Debug.Log($"Player Health is already 0");
+        }
+        
+        else
+        {
+            stats.CurrentHealth -= damageAmount;
+            Debug.Log($"Enemy dealt {damageAmount} damage");
+        }
     }
 }
