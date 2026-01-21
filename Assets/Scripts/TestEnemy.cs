@@ -8,7 +8,7 @@ public class TestEnemy : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // Requires that the game object colliding has the tag "Player"
         {
-            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>(); // gets the player controller based on what object that collided
+            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>(); // gets the player controller based on what object collided
             
             if (playerController != null)
             {
