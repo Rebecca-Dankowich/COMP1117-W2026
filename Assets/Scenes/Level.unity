@@ -250,6 +250,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 1884384411}
     m_Modifications:
     - target: {fileID: 5807151129461023802, guid: aa873b4bd7520dd4799a0739c9fcdb72, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5807151129461023802, guid: aa873b4bd7520dd4799a0739c9fcdb72, type: 3}
       propertyPath: stopAction
       value: 1
       objectReference: {fileID: 0}
@@ -8902,9 +8906,9 @@ GameObject:
   - component: {fileID: 1884384408}
   - component: {fileID: 1884384412}
   - component: {fileID: 1884384414}
+  - component: {fileID: 1884384416}
   - component: {fileID: 1884384413}
   - component: {fileID: 1884384415}
-  - component: {fileID: 1884384416}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -9061,7 +9065,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 5
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -9088,7 +9092,7 @@ MonoBehaviour:
   moveSpeed: 5
   maxHealth: 100
   currentHealth: 0
-  jumpForce: 12
+  jumpForce: 18
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
