@@ -1,3 +1,4 @@
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
     // Private Variables
     private PlayerStats stats;
     private Vector2 moveInput;
+    private bool hasLoggedDeath = false;
 
     //Components
     private Rigidbody2D rBody;
@@ -42,15 +44,35 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage(int damageAmount)
     {
-        if (stats.CurrentHealth <= 0)
+        if (IsDead) return; //Prevents further damage if already dead
+
+        stats.CurrentHealth -= damageAmount;
+
+        //Check if player is dead
+        bool dead = IsDead;
+
+        if (IsDead)
         {
-            Debug.Log($"Player Health is already 0");
+            HandleDeath();
         }
-        
-        else
+    }
+
+    //Derived Property for death
+    public bool IsDead
+    {
+        get
         {
-            stats.CurrentHealth -= damageAmount;
-            Debug.Log($"Enemy dealt {damageAmount} damage");
+            return stats.CurrentHealth <= 0;
+        }
+    }
+
+    // Handles death logic
+    private void HandleDeath()
+    {
+        if (!hasLoggedDeath)
+        {
+            Debug.Log("Player has perished");
+            hasLoggedDeath = true;
         }
     }
 }
