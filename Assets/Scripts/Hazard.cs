@@ -8,7 +8,7 @@ public class Hazard : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player")) // Requires that the game object colliding has the tag "Player"
         {
-            PlayerController playerController = collision.gameObject.GetComponent<PlayerController>();
+            Player playerController = collision.gameObject.GetComponent<Player>();
 
             if (playerController != null)
             {
@@ -17,7 +17,7 @@ public class Hazard : MonoBehaviour
             }
             else
             {
-                Debug.LogWarning("HAZARD.CS: PlayerController is null");
+                Debug.LogWarning("HAZARD.CS: Player is null");
             }
         }
     }

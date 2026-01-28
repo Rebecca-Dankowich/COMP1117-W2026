@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Animator))]
 public class Character : MonoBehaviour
 {
     // Private variables
@@ -10,6 +10,7 @@ public class Character : MonoBehaviour
     [SerializeField] private int currentHealth;
 
     private bool isDead = false;
+    protected Animator anim;
 
     //Public properties
     public float MoveSpeed
@@ -32,6 +33,7 @@ public class Character : MonoBehaviour
 
     protected virtual void Awake()
     {
+        anim = GetComponent<Animator>();
         currentHealth = maxHealth;
     }
 
