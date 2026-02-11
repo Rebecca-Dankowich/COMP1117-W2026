@@ -456,7 +456,7 @@ Transform:
   m_GameObject: {fileID: 117625796}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.7, y: 5, z: -10}
+  m_LocalPosition: {x: 112.99, y: 5.27, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21007,7 +21007,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.7, y: 5, z: -10}
+  m_LocalPosition: {x: 112.99, y: 5.27, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21072,7 +21072,7 @@ GameObject:
   - component: {fileID: 525853369}
   - component: {fileID: 525853368}
   - component: {fileID: 525853367}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bridge
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22545,7 +22545,7 @@ Transform:
   m_GameObject: {fileID: 1884384407}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.7, y: 5, z: 0}
+  m_LocalPosition: {x: 112.99, y: 5.27, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23241,22 +23241,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3362955478080720675, guid: 4b2e3e86a93b16a4a80eaf3b8cf85edf, type: 3}
-      propertyPath: m_Radius
-      value: 0.6556511
-      objectReference: {fileID: 0}
-    - target: {fileID: 3362955478080720675, guid: 4b2e3e86a93b16a4a80eaf3b8cf85edf, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.16716385
-      objectReference: {fileID: 0}
-    - target: {fileID: 3362955478080720675, guid: 4b2e3e86a93b16a4a80eaf3b8cf85edf, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.1268099
-      objectReference: {fileID: 0}
-    - target: {fileID: 3362955478080720675, guid: 4b2e3e86a93b16a4a80eaf3b8cf85edf, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6389681267297892153, guid: 4b2e3e86a93b16a4a80eaf3b8cf85edf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 126.97
@@ -23301,52 +23285,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: WorldSwitch
       objectReference: {fileID: 0}
-    - target: {fileID: 6561973808857528107, guid: 4b2e3e86a93b16a4a80eaf3b8cf85edf, type: 3}
-      propertyPath: m_Layer
-      value: 7
-      objectReference: {fileID: 0}
+    - target: {fileID: 7161984090168449040, guid: 4b2e3e86a93b16a4a80eaf3b8cf85edf, type: 3}
+      propertyPath: onActivated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 525853365}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6561973808857528107, guid: 4b2e3e86a93b16a4a80eaf3b8cf85edf, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3917039952249240310}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b2e3e86a93b16a4a80eaf3b8cf85edf, type: 3}
---- !u!1 &3917039952249240309 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6561973808857528107, guid: 4b2e3e86a93b16a4a80eaf3b8cf85edf, type: 3}
-  m_PrefabInstance: {fileID: 3917039952249240308}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &3917039952249240310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3917039952249240309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4f5a6bfea7f48246b081d6a6e0461a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WorldSwitch
-  offSprite: {fileID: 21300000, guid: d3240c946631a4966b1bcab3db999126, type: 3}
-  onSprite: {fileID: 21300000, guid: 441a2d89600064d4d9ced045b19d0ae6, type: 3}
-  onActivated:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 525853365}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

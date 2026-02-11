@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class WorldSwitch : MonoBehaviour
+public class WorldSwitch : MonoBehaviour, IInteractable
 {
     [SerializeField] private Sprite offSprite;
     [SerializeField] private Sprite onSprite;
