@@ -18,7 +18,7 @@ public class Player : Character
     private bool isGrounded;                    // Holds the result of the ground check operation
     private float currentSpeedModifier = 1f;    // Used within WaterZone
     private float defaultGravityScale;
-    private float currentGravityModifier = 1f;
+    private float currentGravityModifier = 1f;  // Multiplier added to gravity each frame (1f
     private bool isFalling;
 
     protected override void Awake()
@@ -38,10 +38,9 @@ public class Player : Character
 
         anim.SetFloat("xVelocity", Mathf.Abs(rBody.linearVelocity.x));
         anim.SetBool("isGrounded", isGrounded);
-        anim.SetBool("isFalling", isFalling);               // Allows for falling animation to play independently of the y velocity
+        anim.SetBool("isFalling", isFalling);               
 
         float yVelocity = rBody.linearVelocity.y;
-
         //Falling means moving towards the ground
         if (rBody.gravityScale > 0)
         {
@@ -107,9 +106,17 @@ public class Player : Character
         // Reset vertical velocity first to ensure consistent jump height
         rBody.linearVelocity = new Vector2(rBody.linearVelocity.x, 0);
 
-        Vector2 jumpDirection = rBody.gravityScale > 0 ? Vector2.up : Vector2.down; // Adjust jump direction depending on gravity orientation
-
-        rBody.AddForce(jumpDirection * jumpForce, ForceMode2D.Impulse);
+        // Adjust jump direction depending on gravity orientation
+        Vector2 jumpDirection;
+        if (rBody.gravityScale > 0)
+        {
+            jumpDirection = Vector2.up;
+        }
+        else
+        {
+            jumpDirection = Vector2.down;
+        }
+            rBody.AddForce(jumpDirection * jumpForce, ForceMode2D.Impulse);
     }
 
     public void ApplySpeedModifier(float speedModifier)
@@ -136,8 +143,16 @@ public class Player : Character
 
         // Flip sprite vertically if gravity is inverted
         Vector3 scale = transform.localScale;
-        float y = currentGravityModifier < 0 ? -Mathf.Abs(scale.y) : Mathf.Abs(scale.y);
-        transform.localScale = new Vector3(scale.x, y, scale.z);
+        float y;
+        if(currentGravityModifier < 0)
+        {
+            y = -Mathf.Abs(scale.y);
+        }
+        else
+        {
+            y = Mathf.Abs(scale.y);
+        }
+            transform.localScale = new Vector3(scale.x, y, scale.z);
 
         // Reset for next frame
         currentGravityModifier = 1f;
