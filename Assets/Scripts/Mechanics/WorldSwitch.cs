@@ -19,7 +19,7 @@ public class WorldSwitch : MonoBehaviour, IInteractable
     {
         isFlipped = !isFlipped; // Flips the boolean value
 
-        sRend.sprite = isFlipped ? offSprite : onSprite;
+        sRend.sprite = isFlipped ? onSprite : offSprite;
 
         if(isFlipped)
         {
