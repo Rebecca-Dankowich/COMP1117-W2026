@@ -456,7 +456,7 @@ Transform:
   m_GameObject: {fileID: 117625796}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.31, y: 5.27, z: -10}
+  m_LocalPosition: {x: 149.3, y: 3.7000003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20975,7 +20975,7 @@ Transform:
   m_GameObject: {fileID: 519420028}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.31, y: 5.27, z: -10}
+  m_LocalPosition: {x: 149.3, y: 3.7000003, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21629,8 +21629,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TreasureChest
   gemPrefab: {fileID: 2719906185022570682, guid: e160979c408aae84594ee8a736424640, type: 3}
-  gemCount: 20
-  launchForce: 10
+  gemCount: 5
+  launchForce: 5
   openChestSprite: {fileID: -5627866836883545433, guid: 06a1b6b14c855a64abda2eda1eebf49c, type: 3}
 --- !u!1 &701058652
 GameObject:
@@ -22735,7 +22735,7 @@ Transform:
   m_GameObject: {fileID: 1884384407}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.31, y: 5.27, z: 0}
+  m_LocalPosition: {x: 149.3, y: 3.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
